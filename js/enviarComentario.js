@@ -56,12 +56,24 @@ function enviarComentario(){
     
     
     if (document.getElementById("newComentario").value == ""){
-        alert("La caja de comentarios no puede estar vacía")
+        Swal.fire(
+            'La caja de comentarios no puede estar vacía!',
+            '--',
+            'error'
+          )
     }else{
     var cajaComentarios = document.createElement("div");
     document.getElementById("listaComentarios").appendChild(cajaComentarios);
     cajaComentarios.innerHTML += insertComment;
     document.getElementById("newComentario").value = "";
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Muchas gracias por compartir tu opinión con nosotros!',
+        showConfirmButton: false,
+        timer: 2000
+      })
+    
 }
 
     

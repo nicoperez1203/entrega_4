@@ -10,7 +10,7 @@ mostrarNomb()
 Swal.fire({
     position: 'center',
     icon: 'info',
-    title: '¡Gracias por visitar e-mercado',
+    title: '¡Gracias por visitar e-mercado!',
     showConfirmButton: false,
     timer: 2000
   })
