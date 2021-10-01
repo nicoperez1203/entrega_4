@@ -23,39 +23,25 @@ function mostrarInfoAuto(autos) {
     for (let i = 0; i < autos.length; i++) {
         let imageSrc = autos[i];
 
+        if (i === 0) {
+            imagenesVehiculo += `
+            
+            
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="` + imageSrc + `" alt="Onix">
+                    </div> 
+                
+               
+            
+                `
+            continue;
+        } 
+
         imagenesVehiculo += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="Onix">
+            <div class="carousel-item">
+                <img src="` + imageSrc + `"class="d-block w-100"  alt="Onix">
             </div>
-        </div>
         `
-
-        /*`<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="` + imageSrc + `" class="d-block w-100" alt="Onix">
-          </div>
-          <div class="carousel-item">
-            <img src="` + imageSrc + `" class="d-block w-100" alt="Onix">
-          </div>
-          <div class="carousel-item">
-            <img src="` + imageSrc + `" class="d-block w-100" alt="Onix">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>`*/
-
-
-
-        
 
         document.getElementById("imgVehi").innerHTML = imagenesVehiculo;
     }
@@ -92,31 +78,31 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 });
 
-    
-    
-        
-document.addEventListener("DOMContentLoaded", function (e) {  
+
+
+
+document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(PRODUCTS_URL).then(function (resultObj) {
 
-            if (resultObj.status === "ok") {
+        if (resultObj.status === "ok") {
 
 
 
-                relacionados = resultObj.data;
-                mostrarProdRel(relacionados);
+            relacionados = resultObj.data;
+            mostrarProdRel(relacionados);
 
 
 
 
-            }
+        }
 
-        
+
 
     });
 });
 
 
-function mostrarProdRel(array) {        
+function mostrarProdRel(array) {
 
     let listRelacionados = "";
 
