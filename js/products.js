@@ -81,8 +81,8 @@ function mostrarProductos(){
 
         if (((mincost == undefined) || (mincost != undefined && parseInt(product.cost) >= mincost)) &&
             ((maxcost == undefined) || (maxcost != undefined && parseInt(product.cost) <= maxcost))){
-                if (buscar == undefined || product.name.toLowerCase().indexOf(buscar) != -1 || /*Desafiate buscador en vivo*/
-                product.description.toLowerCase().indexOf(buscar) != -1) {/*Desafiate buscador en vivo*/
+                if (buscar == undefined || product.name.toLowerCase().indexOf(buscar) != -1 || /*Desafiate buscador en vivo(entrega 2)*/
+                product.description.toLowerCase().indexOf(buscar) != -1) {/*Desafiate buscador en vivo(entrega 2*/
             
             /*Aqui accedemos a las distintas propiedades que queremos insertar en el html.*/
             listaProductos += `

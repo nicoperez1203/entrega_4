@@ -16,7 +16,7 @@ var comentarios = [];
 
 
 
-function mostrarInfoAuto(autos) {
+function mostrarInfoAuto(autos) {  /*DESAFIATE ENTREGA 4*/
 
     let imagenesVehiculo = "";
 
@@ -111,11 +111,12 @@ function mostrarProdRel(array) {
 
 
         listRelacionados += `
-        <div class="col-lg-3 col-md-4">
-        <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + rePro.imgSrc + `" alt=" ` + rePro.name + `">
-                <a href="products.html"> ` + rePro.name + `</a>
-            </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="` + rePro.imgSrc + `" alt="` + rePro.name + `">
+                <div class="card-body">
+                    <h5 class="card-title">` + rePro.name + `</h5>
+                    <a href="products.html" class="btn btn-primary">Ver</a>
+                </div>
         </div>
         `
 
